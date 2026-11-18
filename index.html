@@ -196,6 +196,18 @@ figcaption{margin-top:12px;font-weight:700;font-size:15px;color:var(--ink)}
 .fphone img{display:block;width:100%;height:auto;border-radius:22px}
 .feeds figcaption{margin-top:12px;font-weight:800}
 @media(max-width:820px){.feeds{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.feeds figure{scroll-snap-align:center}}
+
+.soft{display:inline-block;margin-top:14px;font-weight:700;font-size:15px;text-decoration:underline;text-underline-offset:4px;color:inherit;cursor:pointer;background:none;border:0;font-family:inherit;padding:0}
+.hero .soft{color:#fff;opacity:.95}
+#exm{position:fixed;inset:0;background:rgba(34,24,47,.55);display:none;align-items:center;justify-content:center;z-index:9999;padding:20px}
+#exm.on{display:flex}
+#exm .box{background:#fff;color:#22182f;border-radius:24px;max-width:440px;width:100%;padding:30px 26px;position:relative;box-shadow:0 30px 80px rgba(34,24,47,.3)}
+#exm h3{font-size:24px;line-height:1.2;margin:0 0 8px}
+#exm p{color:#5b5068;font-size:15px;line-height:1.5;margin:0 0 20px}
+#exm .opt{display:flex;align-items:center;gap:12px;padding:15px 18px;border:1.5px solid #eadff0;border-radius:16px;margin-bottom:10px;text-decoration:none;color:#22182f;font-weight:700;font-size:16px}
+#exm .opt:hover{border-color:#ff2d7a}
+#exm .opt small{display:block;font-weight:500;color:#7a6f86;font-size:13px}
+#exm .x{position:absolute;right:16px;top:12px;background:none;border:0;font-size:26px;cursor:pointer;color:#7a6f86}
 </style>
 </head>
 <body>
@@ -216,6 +228,7 @@ figcaption{margin-top:12px;font-weight:700;font-size:15px;color:var(--ink)}
   <h1 style="font-size:clamp(34px,5vw,60px)">Envoyez-moi vos photos ce soir.<br>Dans 48&nbsp;h, votre mois sur les réseaux est prêt.</h1>
   <p class="lead">Artisan, commerçant ou indépendant dans l'Aube : je transforme les photos de votre téléphone en un mois de publications montées, avec leurs textes et votre calendrier. Vous n'avez plus qu'à appuyer sur «&nbsp;publier&nbsp;».</p>
   <div class="hcta"><a class="btn" href="https://buy.stripe.com/9B66oG6RkfEe2hX8gv3sI00">Je réserve mon mois à 49&nbsp;€ →</a><a class="ghost" href="#exemples">Voir des exemples</a></div>
+  <button type="button" class="soft" data-exm>Pas encore décidé(e) ? Recevez gratuitement un exemple pour votre métier →</button>
   <small>Au lieu de 99&nbsp;€ · paiement unique, aucun abonnement · 🔒 paiement sécurisé Stripe</small>
   <div class="hquote"><span class="stars">★★★★★</span> «&nbsp;J'en ai passé des soirées à faire mes posts… ce mois-ci, je n'ai plus qu'à cliquer.&nbsp;» <em>Une créatrice de l'Aube, cliente</em></div>
  </div>
@@ -366,6 +379,7 @@ figcaption{margin-top:12px;font-weight:700;font-size:15px;color:var(--ink)}
       <a class="btn" href="https://buy.stripe.com/9B66oG6RkfEe2hX8gv3sI00">Je réserve mon mois à 49&nbsp;€ →</a>
       <p class="safe">🔒 Paiement sécurisé par Stripe · paiement unique</p>
       <p class="safe" style="margin-top:4px">Sous 24&nbsp;h ouvrées après le paiement : le questionnaire et le lien pour envoyer vos fichiers, par e-mail.</p>
+      <button type="button" class="soft" data-exm>Pas encore décidé(e) ? Recevez gratuitement un exemple pour votre métier →</button>
     </div>
   </div>
 </div></section>
@@ -412,7 +426,8 @@ figcaption{margin-top:12px;font-weight:700;font-size:15px;color:var(--ink)}
 <section style="padding-top:20px"><div class="wrap"><div class="final">
   <h2>Prêt à ne plus vous demander quoi poster ?</h2>
   <p>Votre mois de contenu à 49&nbsp;€ au lieu de 99&nbsp;€, jusqu'au lundi 30 novembre. Paiement unique, aucun abonnement.</p>
-  <a class="btn" href="https://buy.stripe.com/9B66oG6RkfEe2hX8gv3sI00">Je réserve mon mois à 49&nbsp;€ →</a>
+  <a class="btn" href="https://buy.stripe.com/9B66oG6RkfEe2hX8gv3sI00">Je réserve mon mois à 49&nbsp;€ →</a><br>
+  <button type="button" class="soft" data-exm>Pas encore décidé(e) ? Recevez gratuitement un exemple pour votre métier →</button>
 </div></div></section>
 
 <footer><div class="wrap">
@@ -443,6 +458,22 @@ function set(x){try{localStorage.setItem(K,x)}catch(e){}document.getElementById(
 if(v==='yes')px();else if(v!=='no'){var b=document.getElementById('ck');b.style.display='block';document.getElementById('ckyes').onclick=function(){set('yes')};document.getElementById('ckno').onclick=function(){set('no')};}
 document.querySelectorAll('a[href*="buy.stripe.com"]').forEach(function(a){a.addEventListener('click',function(){if(window.fbq)fbq('track','InitiateCheckout',{value:49.00,currency:'EUR'})})});
 })();
+</script>
+
+<div id="exm" role="dialog" aria-modal="true" aria-labelledby="exmt"><div class="box">
+<button class="x" type="button" aria-label="Fermer" data-exmx>×</button>
+<h3 id="exmt">Un exemple pour votre métier, offert</h3>
+<p>Dites-moi votre métier et votre ville : je vous envoie sous 24&nbsp;h un exemple de publication pensé pour vous. Sans engagement.</p>
+<a class="opt" data-c href="https://m.me/1407360362470173" target="_blank" rel="noopener">💬 <span>Sur Messenger<small>Le plus rapide</small></span></a>
+<a class="opt" data-c href="https://ig.me/m/pretaposter.studio" target="_blank" rel="noopener">📸 <span>Sur Instagram<small>@pretaposter.studio</small></span></a>
+<a class="opt" data-c href="mailto:studio.pretaposter@gmail.com?subject=Un%20exemple%20pour%20mon%20m%C3%A9tier&amp;body=Bonjour%2C%0A%0AMon%20m%C3%A9tier%20%3A%20%0AMa%20ville%20%3A%20%0AMon%20compte%20Instagram%20ou%20Facebook%20(si%20j'en%20ai%20un)%20%3A%20%0A%0AMerci%20!">✉️ <span>Par e-mail<small>studio.pretaposter@gmail.com</small></span></a>
+</div></div>
+<script>
+(function(){var m=document.getElementById('exm');
+document.querySelectorAll('[data-exm]').forEach(function(b){b.addEventListener('click',function(){m.classList.add('on');try{if(window.fbq)fbq('trackCustom','DemandeExemple')}catch(e){}})});
+m.addEventListener('click',function(e){if(e.target===m||e.target.hasAttribute('data-exmx'))m.classList.remove('on')});
+document.querySelectorAll('#exm [data-c]').forEach(function(a){a.addEventListener('click',function(){try{if(window.fbq)fbq('track','Contact')}catch(e){}})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')m.classList.remove('on')});})();
 </script>
 </body>
 </html>
