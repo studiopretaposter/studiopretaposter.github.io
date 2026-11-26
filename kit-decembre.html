@@ -82,10 +82,25 @@ h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(
 footer{padding:40px 0 60px;font-size:14px;color:var(--grey);text-align:center}footer a{color:var(--grey)}
 .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;margin-top:18px}
 .card h3{font-size:19px;margin-bottom:6px}.card p{color:#4A4057;font-size:15.5px;margin-bottom:14px}
+.band{background:var(--ink);color:#fff;font-size:13px;font-weight:700;overflow:hidden;white-space:nowrap}
+.band div{display:inline-block;padding:9px 0;animation:mq 28s linear infinite}
+.band span{margin:0 22px}.band span:before{content:"✦";color:var(--pink);margin-right:10px}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:14px;font-weight:600;color:#4A4057}
+.trust span:before{content:"✓ ";color:var(--pink);font-weight:900}
+.recap{background:#fff;border:2px solid var(--ink);border-radius:22px;padding:30px;margin-top:40px;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}
+.recap ul{list-style:none}.recap li{padding:7px 0 7px 30px;position:relative;font-size:16px;border-bottom:1px dashed var(--line)}
+.recap li:before{content:"✅";position:absolute;left:0}
+.recap .p{text-align:center}.recap .p b{display:block;font-size:52px;font-weight:900;letter-spacing:-.02em;line-height:1}
+.recap .p small{display:block;color:var(--grey);margin:6px 0 16px}
+.sticky{display:none}
+@media(max-width:820px){.recap{grid-template-columns:1fr}.sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;border-top:1px solid var(--line);padding:10px 14px;gap:12px;align-items:center;justify-content:space-between;box-shadow:0 -8px 24px rgba(34,24,47,.08)}
+.sticky b{font-size:20px}.sticky small{display:block;font-size:12px;color:var(--grey)}.sticky .btn{padding:12px 20px;font-size:15px}body{padding-bottom:70px}}
 @media(max-width:820px){.hero .wrap,.pain,.items,.steps,.who{grid-template-columns:1fr}.stack{height:340px}.gal{grid-template-columns:repeat(2,1fr)}.gal.st{grid-template-columns:repeat(3,1fr)}section{padding:64px 0}}
 </style>
 </head>
 <body>
+<div class="band" aria-hidden="true"><div><span>Accès immédiat après paiement</span><span>Paiement sécurisé</span><span>Un compte Canva gratuit suffit</span><span>31 jours prêts à poster</span><span>20 posts + 10 stories Canva</span><span>30 légendes à compléter</span><span>Accès immédiat après paiement</span><span>Paiement sécurisé</span><span>Un compte Canva gratuit suffit</span><span>31 jours prêts à poster</span><span>20 posts + 10 stories Canva</span><span>30 légendes à compléter</span></div></div>
 <header class="top"><div class="wrap"><a class="brand" href="index.html"><img src="logo.png" alt="">Prêt à Poster</a><a class="l" href="#acheter">Le kit · 17 €</a></div></header>
 
 <section class="hero"><div class="wrap">
@@ -95,6 +110,7 @@ footer{padding:40px 0 60px;font-size:14px;color:var(--grey);text-align:center}fo
 <p class="lead">Le calendrier, les légendes et les visuels Canva des 31 jours de décembre. Tu ajoutes tes photos, ton nom, et tu publies. Dix minutes par jour, pas une soirée par post.</p>
 <div class="price"><b>17&nbsp;€</b><span>TTC · paiement unique · accès immédiat</span></div>
 <a class="btn" href="https://buy.stripe.com/28E9AS4JcfEeaOtcwL3sI01">Je prends mon kit →</a>
+<div class="trust"><span>Paiement sécurisé</span><span>Sans abonnement</span><span>Accès immédiat</span></div>
 <p class="note">Un compte Canva gratuit suffit. Tu reçois tout sur la page qui suit le paiement.</p>
 </div>
 <div class="stack" aria-hidden="true">
@@ -134,6 +150,16 @@ footer{padding:40px 0 60px;font-size:14px;color:var(--grey);text-align:center}fo
 <img src="kit/story-a.jpg" alt="Modèle de story : sondage utile ou plaisir" loading="lazy">
 <img src="kit/story-b.jpg" alt="Modèle de story : horaires des fêtes" loading="lazy">
 <img src="kit/story-c.jpg" alt="Modèle de story : coup de cœur du jour" loading="lazy">
+</div>
+<div class="recap">
+<ul>
+<li><b>Le calendrier des 31 jours</b> : quoi poster, chaque jour de décembre</li>
+<li><b>30 légendes rédigées</b>, à compléter avec ton produit et ton prix</li>
+<li><b>20 posts Canva</b> en 2 packs, au même style</li>
+<li><b>10 stories</b> : sondage, calendrier de l'Avent, horaires, compte à rebours…</li>
+<li><b>Le guide PDF</b> pour tout personnaliser en une heure</li>
+</ul>
+<div class="p"><b>17&nbsp;€</b><small>paiement unique · TTC</small><a class="btn" href="https://buy.stripe.com/28E9AS4JcfEeaOtcwL3sI01">Je prends mon kit →</a></div>
 </div>
 <p class="cap">Extraits des modèles Canva inclus. Les zones « Votre photo ici » accueillent tes propres photos.</p>
 </div></section>
@@ -182,6 +208,8 @@ footer{padding:40px 0 60px;font-size:14px;color:var(--grey);text-align:center}fo
 <details><summary>Comment je reçois le kit ?</summary><p>Juste après le paiement, tu arrives sur ta page d'accès : le guide PDF à télécharger et les 3 liens Canva. Garde-la dans tes favoris. En cas de souci, écris à studio.pretaposter@gmail.com et je te l'envoie par e-mail.</p></details>
 <details><summary>Ça marche pour mon activité ?</summary><p>Le kit est pensé pour les boutiques, instituts, ateliers et indépendantes qui vendent localement. Les légendes ont des crochets à compléter, elles s'adaptent à un fleuriste comme à une esthéticienne.</p></details>
 <details><summary>Je peux l'utiliser sur Facebook ?</summary><p>Oui. Les visuels et les légendes fonctionnent aussi sur une page Facebook.</p></details>
+<details><summary>Je garde le kit combien de temps ?</summary><p>Il est à toi. Le guide PDF se télécharge, et les modèles Canva sont copiés dans ton propre compte : tu peux les réutiliser l'an prochain.</p></details>
+<details><summary>Je peux être remboursée ?</summary><p>C'est un produit numérique livré tout de suite : une fois le kit ouvert, il n'y a pas de droit de rétractation (détails dans les <a href="cgv.html">CGV</a>). Tout le contenu est décrit sur cette page pour que tu saches exactement ce que tu achètes.</p></details>
 <details><summary>Et si je n'ai pas le temps du tout ?</summary><p>Alors c'est le <a href="index.html">mois de contenu fait pour toi</a> qu'il te faut : tu m'envoies tes photos, je te livre tout le mois en 48 heures.</p></details>
 </div></section>
 
@@ -189,6 +217,7 @@ footer{padding:40px 0 60px;font-size:14px;color:var(--grey);text-align:center}fo
 <div><div class="kicker">Tu préfères qu'on le fasse pour toi&nbsp;?</div><h2 style="margin:0">Ton mois de contenu, <em>livré en 48&nbsp;h.</em></h2></div>
 <a class="btn dark" href="index.html">Voir le service →</a>
 </div></section>
+<div class="sticky"><div><b>17&nbsp;€</b><small>Kit Décembre · accès immédiat</small></div><a class="btn" href="https://buy.stripe.com/28E9AS4JcfEeaOtcwL3sI01">Je le prends →</a></div>
 <footer><div class="wrap">
 <p>Prêt à Poster · <a href="mailto:studio.pretaposter@gmail.com">studio.pretaposter@gmail.com</a></p>
 <p><a href="mentions-legales.html">Mentions légales</a> · <a href="cgv.html">Conditions générales de vente</a></p>
