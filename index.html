@@ -186,6 +186,14 @@ figcaption{margin-top:12px;font-weight:700;font-size:15px;color:var(--ink)}
 .proof{background:#fff;border-bottom:1px solid var(--line)}
 .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:26px 24px}
 .proof div div,.proof .wrap>div{text-align:center}.proof b{display:block;font-size:30px;font-weight:900;background:var(--grad);-webkit-background-clip:text;color:transparent}.proof span{font-size:14px;color:var(--grey)}
+.revs{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:22px;margin-top:26px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 26px 22px;box-shadow:0 14px 40px rgba(80,30,110,.08);display:flex;flex-direction:column;gap:14px}
+.rev .rq{font-size:16px;line-height:1.6;margin:0;font-weight:400;color:var(--ink)}.rev .rq b{background:linear-gradient(transparent 60%,#FFE0EE 60%)}
+.rev .rw{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:6px;border-top:1px solid var(--line)}
+.rev .av{width:42px;height:42px;border-radius:50%;background:var(--grad);color:#fff;font-weight:800;display:grid;place-items:center;flex:none}
+.rev .who{font-weight:800;font-size:15px;line-height:1.3}.rev .who .act{font-weight:500;color:var(--grey);font-size:13.5px}
+.rev .src{margin-left:auto;font-size:12.5px;color:var(--grey);text-decoration:none;white-space:nowrap}.rev .src:hover{color:var(--pink)}
+.rev .rec{font-size:13px;font-weight:700;color:var(--vio)}
 .avis{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
 .avis img{width:100%;border-radius:20px;border:6px solid #fff;box-shadow:0 24px 60px rgba(80,30,110,.18);transform:rotate(-1.5deg)}
 .avis blockquote{font-size:24px;font-weight:800;line-height:1.35;margin:0}.avis blockquote+p{color:var(--grey);margin-top:12px}
@@ -351,6 +359,18 @@ figcaption{margin-top:12px;font-weight:700;font-size:15px;color:var(--ink)}
  <div><div class="kicker">Ils l'ont reçu</div><blockquote>«&nbsp;J'en ai passé, des soirées à faire mes posts. Ce mois-ci, je n'ai plus qu'à cliquer.&nbsp;»</blockquote><p>Message reçu d'une cliente, créatrice dans l'Aube, après sa livraison. (Capture réelle, nom masqué.)</p><a class="btn grad" style="margin-top:18px" href="https://buy.stripe.com/9B66oG6RkfEe2hX8gv3sI00">Moi aussi, je veux mon mois →</a></div>
  <img src="ex/hero/avis.jpg" alt="Avis d'une cliente Prêt à Poster" loading="lazy">
 </div></div></section>
+
+<section id="avis" style="padding-top:20px"><div class="wrap">
+  <div class="kicker">Leurs avis</div>
+  <h2>Elles ont testé Prêt à Poster.</h2>
+  <div class="revs">
+    <div class="rev">
+      <div class="rec">♥ Recommande Prêt à Poster</div>
+      <p class="rq">«&nbsp;J'ai découvert Prêt à Poster grâce à Clémence et je suis ravie de cette expérience&nbsp;! Un accompagnement au top, de très bons conseils et surtout une personne à l'écoute et disponible. <b>Les contenus sont de qualité, et le calendrier permet de savoir quoi et quand publier</b>, c'est le TOP&nbsp;! C'est très facile à utiliser et <b>ça permet de gagner un temps précieux</b>. Merci Clémence pour ton professionnalisme, ta gentillesse et ton aide dans le développement de L'Atelier Nodena. Je recommande Prêt à Poster les yeux fermés&nbsp;!&nbsp;»</p>
+      <div class="rw"><div class="av">M</div><div class="who">Marine<div class="act">L'Atelier Nodena, institut du regard</div></div><a class="src" href="https://www.facebook.com/studio.pretaposter/reviews" target="_blank" rel="noopener">Avis Facebook ↗</a></div>
+    </div>
+  </div>
+</div></section>
 
 <section id="offre" style="padding-top:20px"><div class="wrap">
   <div class="kicker">L'offre</div>
